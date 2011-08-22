@@ -1,86 +1,147 @@
-\skriptsection{Complexe Zahlen}{1}
-\skriptsubsection{Grundlagen}{1ff}
-\begin{minipage}[t]{9.4cm}
-  \textbf{Cartesische Form}\\
-  Normalform: $z = z_1 +j z_2$\\
-  $z_1 = \text{Re}(z), \quad z_2 = \text{Im}(z)$\\
-  Umrechnung in Polar:\\
-  $r = |z| = \sqrt{z_1^2 + z_2^2}, \quad 
-  \varphi =   \begin{cases} 
-                  \arctan(\frac{z_2}{z_1}) &z_1 \geq 0\\
-                  \arctan(\frac{z_2}{z_1}) + \pi &z_1 < 0
-          \end{cases}$
-\end{minipage}
-\begin{minipage}[t]{9.4cm}
-  \textbf{Polarsystem}\\
-  Normalform: 
-  $z = r \cjs(\varphi) = r(\cos{\varphi} + j\sin{\varphi}) = r e^{j \varphi}$\\
-  $\varphi = \arg(z)$
+\section{Complexe Zahlen}
+\subsection{Grundlagen}
+\subsubsection{Imaginäre Einheit}
+$j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{1}{j} = -j$
 
-  Umrechnung in Cartesisch:\\
-  $z_1 = |z| \cos{\varphi}, \quad z_2 = |z| \sin{\varphi}$
-\end{minipage}
-\begin{center}
-{\textbf{Imaginäre Einheit} $\qquad j^2 = -1 \qquad e^{j\pi} = -1 \qquad
-\frac{1}{j} = -j$}
-\end{center}
-
-\skriptsubsection{Rechenregeln}{10ff}
+\subsubsection{Darstellungsformen}
 \begin{tabular}{ll}
-$+, -$
-&Selbige Regeln wie für $\mathbb{R}$\\
-
-Mulitplikation
-&$a \cdot b = 
-|a| |b| \cjs(\alpha + \beta) = 
-|a| |b| e^{j(\alpha + \beta)}$\\
-
-Division
-&$\left|\frac{a}{b}\right| = 
-\frac{\left|a\right|}{\left|b\right|} \cjs(\alpha - \beta) =
-\frac{\left|a\right|}{\left|b\right|} e^{j(\alpha - \beta)}$ (cartesisch: Mit
-conj. complex des Nenners erweitern) \\
-
-Conjugiert complex
-&$\overline{z} = \overline{z_1 + jz_2} = z_1 - jz_2; \qquad \qquad z \cdot \overline{z} = |z|^2$\\
-
-Wurzeln
-&$\sqrt[n]{a} = \sqrt[n]{|a|} \cjs(\frac{arg(a)}{n}+k\frac{2\pi}{n}) = 
-\sqrt[n]{|a|} e^{j(\frac{\alpha}{n} + k \frac{2\pi}{n})} \quad (k = 0, 1,
-\ldots, n-1 \Rightarrow \text{n Lösungen in } \mathbb{C} !)$ \\
-
-Potenzen
-&$a^n = |a|^n \cjs(n\alpha) = 
-|a|^n e^{jn\alpha}$\\
-
-$e^z$ &$e^{z_1+jz_2} = e^{z_1} \cjs(z_2) = e^{z_1} (\cos{z_2} + j\sin{z_2})$\\
-
-Moivre'sche Formel
-&$\text{cjs}^n(\varphi) =
-(\cos{\varphi} + j\sin{\varphi})^n = 
-\cos(n\varphi) +j\sin(n\varphi) \quad (n \in \mathbb{N})$\\
-
-Logarithmus
-&$Ln(z) = \ln{|z|} + j (\arg(z) + 2k \pi)$
+	Cartesische Form: & $z = z_1 + j z_2$ \quad Wobei gilt: $z_1 = \text{Re}(z),
+	\quad z_2 = \text{Im}(z)$ \\
+	Polar Form: &   $z = r \cjs(\varphi) = r(\cos{\varphi} + j\sin{\varphi}) = r
+	e^{j \varphi}$ 	\\
+\end{tabular}
+\subsubsection{Umrechnung}
+\begin{tabular}{ll}
+	Cartesisch $\rightarrow$ Polar: & $r = |z| = \sqrt{z_1^2 + z_2^2} \qquad   
+		\varphi = arg(z) 
+		        = 	\begin{cases} 
+                       	\arctan(\frac{z_2}{z_1}) &z_1 \geq 0\\
+                  		\arctan(\frac{z_2}{z_1}) + \pi &z_1 < 0
+          			\end{cases}
+          		=	\begin{cases}
+          				\arccos(\frac{z_1}{r}) & z_2 \geq 0 \\
+          				-\arccos(\frac{z_1}{r}) & z_2 < 0          		
+          			\end{cases}$ \\
+          			
+	Polar $\rightarrow$ Cartesisch: & $z_1 = r \cdot cos(\varphi) \qquad z_2 = r
+	\cdot sin(\varphi)$ \\
 \end{tabular}
 
-\begin{minipage}[t]{11.4cm}
-  \textbf{Bemerkungen}\\
-  \begin{itemize}
-    \item $p_n(z) \; (n \geq 1, z \in \mathbb{C})$ hat $n$ Lösungen und Nullstellen (in
-  $\mathbb{C}$)  
+
+\subsection{Rechenregeln}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+	\hline
+	\textbf{Operation} & \textbf{Cartesisch} & \textbf{Polar} \\
+	\hline
+	
+	Addition \& Subtraktion & 
+	\multicolumn{2}{|c|}{Selbige Regeln wie für
+	$\mathbb{R}$}\\
+	\hline
+	
+	Multiplikation ($a \cdot b$) &
+	$ = (a_1 + j a_2) \cdot (b_1 + j b_2) = (a_1 b_1 - a_2 b_2) + j(a_1 b_2 + a_2
+	b_1) $ &
+	$ = r_a r_b \cjs(\alpha + \beta) = r_a r_b e^{j(\alpha +
+	\beta)}$\\
+	\hline 
+	
+	Division ($\frac{a}{b}$) &
+	$ = \frac{a \cdot \overline{b}}{b \cdot \overline{b}}
+	  = \frac{a_1 b_1 + a_2 b_2}{b_1^2 + b_2^2} + j \frac{a_2 b_1 - a_1
+	  b_2}{b_1^2 + b_2^2}$ & 
+	$ = \frac{r_a}{r_b} \cjs(\alpha - \beta) 
+	  = \frac{r_a}{r_b} e^{j(\alpha - \beta)}$ \\
+	\hline
+	\hline
+	
+	\textbf{Operation} & \multicolumn{2}{|c|}{
+		\textbf{Cartesisch}
+	} \\
+	
+	\hline
+	Conjugiert Complex $\overline{z}$ &
+	\multicolumn{2}{|l|}{
+		$ = \overline{z_1 + jz_2} = z_1 - jz_2 \qquad
+		  z \cdot \overline{z} = |z|^2 = z_1^2 + z_2^2$
+	} \\
+	\hline
+	\hline
+	
+	\textbf{Operation} & \multicolumn{2}{|c|}{
+		\textbf{Polar}
+	} \\
+	
+	\hline
+	Wurzeln $\sqrt[n]{a}$ &
+	\multicolumn{2}{|l|}{
+		$ = \sqrt[n]{r_a} \cjs(\frac{\varphi}{n}+k\frac{2\pi}{n}) 
+		  = \sqrt[n]{r_a} e^{j(\frac{\varphi}{n} + k \frac{2\pi}{n})} \quad 
+		  (k = 0, 1, \ldots, n-1 \Rightarrow \text{n Lösungen in } \mathbb{C} !)
+		$
+	} \\
+	\hline
+	
+	Potenzen $a^n$ &
+	\multicolumn{2}{|l|}{
+		$ = r_a^n \cjs(n\varphi) 
+		  = r_a^n e^{jn\varphi}
+		$
+	} \\
+	\hline
+	
+	$e^z$ &
+	\multicolumn{2}{|l|}{
+		$ e^{z_1+jz_2} 
+		  = e^{z_1} \cjs(z_2) 
+		  = e^{z_1} (\cos{z_2} + j\sin{z_2})
+		$
+	} \\
+	\hline
+	
+	Moivre'sche Formel &
+	\multicolumn{2}{|l|}{
+		$ \text{cjs}^n(\varphi) 
+		  = (\cos{\varphi} + j\sin{\varphi})^n 
+		  = \cos(n\varphi) +j\sin(n\varphi) \quad (n \in \mathbb{N})
+		$
+	} \\
+	\hline
+	
+	Logarithmus $Ln(a)$ &
+	\multicolumn{2}{|l|}{
+		$ = \ln{r_a} + j (\varphi + 2k \pi)$
+	} \\
+	\hline
+\end{tabular}
+\end{center}
+
+\textbf{Bemerkungen:}
+\begin{itemize}
     \item Allgemeine Potenzen $a^b,\;a,b \in \mathbb{C}$ können mit $e^{b \cdot 
-    Ln(a)}$ und den bekannten für $\mathbb{R}$ gültigen Potenzregeln gelöst
-    werden.
+    	Ln(a)}$ und den bekannten für $\mathbb{R}$ gültigen Potenzregeln gelöst
+    	werden.
     \item Re$\left (\frac{a}{b} \right) = 0$: Die beiden compl. Zahlen $a, b$
-    stehen senkrecht zueinander.
-  \end{itemize}
-\end{minipage}
-\begin{minipage}[t]{7.4cm}
-  \textbf{Einheitswurzeln}\\
-  \includegraphics[width=7cm]{./bilder/einheitswurzel.png}
-\end{minipage}
-\subsection{12. Einheitswurzeln ($k 30 \symbol{23}$)}
+    	stehen senkrecht zueinander.
+\end{itemize}
+
+\subsection{Einheitswurzeln}
+\begin{tabular}{p{10cm}p{8cm}}
+\begin{itemize}
+  \item Einheitswurzeln treten als reelle Zahlen $1$ bzw. $\mp 1$ oder dann als
+  konjugiert komplexe Zahlenpaare auf.
+  \item Die Einheitswurzeln können nach obigen Regeln berechnet werden, wobei $r
+  = 1$ ist. 
+\end{itemize} 
+&
+\begin{center}
+\includegraphics[width=7cm]{./bilder/einheitswurzel.png}
+\end{center} \\
+\end{tabular}
+
+
+\textbf{12.Einheitsqurzel:} \\
 $e^{(12)}_1 = 1,\;
   e^{(12)}_2 = \frac{\sqrt3}{2} + \frac12j,\;
   e^{(12)}_3 = \frac12 + \frac{\sqrt3}{2}j,\;
@@ -93,6 +154,10 @@ $e^{(12)}_1 = 1,\;
   e^{(12)}_{10} = -j,\;
   e^{(12)}_{11} = \frac12 - \frac{\sqrt3}{2}j,\;
   e^{(12)}_{12} = \frac{\sqrt3}{2} - \frac12j$
+
+
+
+
 
 \subsection{Nullstellen von Polynomen}
 Ein complexes Polynom p(z) von Grad $n$ hat in $ \mathbb{C} $ genau $n$ Nullstellen.\\
