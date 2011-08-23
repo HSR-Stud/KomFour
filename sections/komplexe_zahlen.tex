@@ -126,6 +126,7 @@ $j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{1}{j} = -j$
     	stehen senkrecht zueinander.
 \end{itemize}
 
+
 \subsection{Einheitswurzeln}
 \begin{tabular}{p{10cm}p{8cm}}
 \begin{itemize}
@@ -133,6 +134,10 @@ $j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{1}{j} = -j$
   konjugiert komplexe Zahlenpaare auf.
   \item Die Einheitswurzeln können nach obigen Regeln berechnet werden, wobei $r
   = 1$ ist. 
+  \item Berechnung: 
+  		$ \sqrt[n]{e} = \sqrt[n]{1} = \cjs(k \frac{2\pi}{n}) 
+		  = e^{j(k \frac{2\pi}{n})} $  \newline
+		$  (k = 0, 1, \ldots, n-1 \Rightarrow \text{n Lösungen in } \mathbb{C} !)$
 \end{itemize} 
 &
 \begin{center}
@@ -140,47 +145,32 @@ $j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{1}{j} = -j$
 \end{center} \\
 \end{tabular}
 
-
-\textbf{12.Einheitsqurzel:} \\
-$e^{(12)}_1 = 1,\;
-  e^{(12)}_2 = \frac{\sqrt3}{2} + \frac12j,\;
-  e^{(12)}_3 = \frac12 + \frac{\sqrt3}{2}j,\;
-  e^{(12)}_4 = j,\;
-  e^{(12)}_5 = -\frac12 + \frac{\sqrt3}{2}j,\;
-  e^{(12)}_6 = -\frac{\sqrt3}{2} + \frac12 j,\\
-  e^{(12)}_7 = -1,\;
-  e^{(12)}_8 = -\frac{\sqrt3}{2} - \frac12 j,\;
-  e^{(12)}_9 = -\frac12 - \frac{\sqrt3}{2}j,\;
-  e^{(12)}_{10} = -j,\;
-  e^{(12)}_{11} = \frac12 - \frac{\sqrt3}{2}j,\;
-  e^{(12)}_{12} = \frac{\sqrt3}{2} - \frac12j$
-
-
+\textbf{12.Einheitswurzel:} \\
+\begin{tabular}{llllll}
+	$e^{(12)}_1 = 1$ & $e^{(12)}_2 = \frac{\sqrt3}{2} + \frac12j$ & $e^{(12)}_3 =
+	\frac12 + \frac{\sqrt3}{2}j$ & $e^{(12)}_4 = j$ & $e^{(12)}_5 = -\frac12 +
+	\frac{\sqrt3}{2}j$ & $e^{(12)}_6 = -\frac{\sqrt3}{2} + \frac12 j$ \\
+	$e^{(12)}_7 = -1$ & $e^{(12)}_8 = -\frac{\sqrt3}{2} - \frac12 j$ &
+	$e^{(12)}_9 = -\frac12 - \frac{\sqrt3}{2}j$ & $e^{(12)}_{10} = -j$ &
+	$e^{(12)}_{11} = \frac12 - \frac{\sqrt3}{2}j$ & $e^{(12)}_{12} =
+	\frac{\sqrt3}{2} - \frac12j$ \\
+\end{tabular}
 
 
 
 \subsection{Nullstellen von Polynomen}
-Ein complexes Polynom p(z) von Grad $n$ hat in $ \mathbb{C} $ genau $n$ Nullstellen.\\
-Alle diese Nullstellen liegen in einer Kreisscheibe um den Ursprung mit dem Radius $ \sum\limits_{k=0}^{n} \left| \frac{a_k}{a_n} \right|$ \\ \\
-Bei Polynomen mit reellen Koeffizienten treten nicht-reelle Nullstellen immer
-als conj.-compl. Paare ($z_0$ und $\bar{z_0}$) auf. 
+\begin{itemize}
+  \item Ein komplexes Polynom p(z) vom Grad $n$ hat in $ \mathbb{C}$ genau $n$
+  Nullstellen.
+  \item Alle Nullstellen liegen in einer Kreisscheibe um den Ursprung mit dem
+  Radius $ \sum\limits_{k=0}^{n} \left| \frac{a_k}{a_n} \right|$
+  \item Bei Polynomen mit reellen Koeffizienten treten nicht-reelle Nullstellen
+  immer als conj.-compl. Paare ($z_0$ und $\overline{z_0}$) auf.
+  \item Berechnung: Nullstellen abspalten , 2. Grades: Mitternachtsformel (siehe
+  ..?)
+\end{itemize}
 
-\skriptsubsection{Euler}{30f}
-\begin{tabular}{llllll}
-$\sin{\alpha} = \frac{e^{j\alpha} - e^{-j\alpha}}{2j}$ &
-
-$\cos{\alpha} = \frac{e^{j\alpha} + e^{-j\alpha}}{2}$ &
-
-$\tan{\alpha} = \frac{\sin \alpha}{\cos \alpha}$ & 
-
-$ \qquad \qquad $ &
-
-$\sinh{\alpha} = \frac{e^\alpha - e^{-\alpha}}{2} $ &
-
-$\cosh{\alpha} = \frac{e^\alpha + e^{-\alpha}}{2} $
-\end{tabular}
-
-\skriptsubsection{Überlagerung von harmonischen Schwingungen}{32f}
+\subsection{Überlagerung von harmonischen Schwingungen}
 $$A \cdot \sin(\omega t + \varphi) = Im[A \cdot e^{j(\omega t + \varphi)}] =
 Im[\underbrace{A \cdot e^{j\varphi}}_{\text{\tiny{Complexe Amplitude}}}
 \cdot \underbrace{e^{j\omega t}}_{\text{\tiny{Zeitfunktion}}}]$$
