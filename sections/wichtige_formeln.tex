@@ -113,9 +113,53 @@
     \cos\left(\frac{a-b}{2}\right)$\\
     $\tan(a) \pm \tan(b)=\frac{\sin(a \pm b)}{\cos(a)\cos(b)}$      
 \end{minipage}
-\begin{minipage}{6cm}
-  \includegraphics[width=6cm]{./bilder/vektor1.png}
-\end{minipage}
+
+  \begin{tabular}{|p{3cm}|p{7cm}|p{7cm}|}
+    \hline
+    & Reelle Fourierreihe & Komplexe Fourierreihe \\
+    \hline
+    Skalarprodukt &  $\langle f;g \rangle = \frac{2}{T}\int\limits_0^Tf(t)\cdot
+    g(t)\cdot dt $ & $\langle f;g \rangle = \frac{1}{T}\int\limits_0^Tf(t)\cdot
+    \overline{g(t)}\cdot dt $ \\
+    & $(I)\ \langle f;f \rangle > 0\ f"ur\ f\neq 0$ &
+    $(I)\ \langle f;f \rangle > 0\ f"ur\ f\neq 0$ \\
+    & $(II)\ \langle f;g \rangle = \langle g;f \rangle $ &
+    $(II)\ \langle f;g \rangle = \overline{\langle g;f \rangle} $ \\
+    & $(III) \langle r\cdot f;g\rangle = r\cdot\langle f;g\rangle,\ r\epsilon
+    \mathbb R$ & $(III) \langle r\cdot f;g\rangle = r\cdot\langle f;g\rangle,\ 
+    r\epsilon \mathbb R$
+    \\
+    \hline
+    Länge (Norm): & \multicolumn{2}{|l|}{
+    $\parallel f \parallel = \sqrt{\langle
+    f;f \rangle} \Rightarrow y=3x^2+4 \rightarrow \sqrt{3\cdot3+4\cdot4}=5$ 
+    } \\
+    & \multicolumn{2}{|l|}{ $ (I)\ \parallel f \parallel > 0 f"ur f \neq 0$} \\
+    & \multicolumn{2}{|l|}{ $ (II)\ \parallel f+g \parallel \leq \parallel f
+    \parallel + \parallel g \parallel (Dreiecksgleichung)$} \\
+    & \multicolumn{2}{|l|}{ $ (III)\ \parallel r\cdot f \parallel = |r| \cdot
+    \parallel f \parallel , \ r \epsilon \mathbb R bzw. \parallel c\cdot
+    f\parallel = |c|\cdot \parallel f \parallel, c\epsilon\mathbb C$} \\
+    \hline
+    Abstand: & \multicolumn{2}{|l|}{ $ \parallel f-g \parallel =
+    |\sqrt{\langle f-g;f-g \rangle}| \Rightarrow
+    |p-q|=(3x^2+4)-(x^2+7)=2x^2+11 \rightarrow
+    \sqrt{2\cdot2+11\cdot11}=5\cdot\sqrt{5}$}
+    \\
+    \hline
+    Winkel, Orthogonalit"at &
+    \multicolumn{2}{|l|}{
+    $\sphericalangle(f;g)=\arccos\left( \frac{\langle f;g \rangle}{\parallel f
+    \parallel \cdot \parallel g \parallel} \right) = \arccos\left(\frac{\langle f;g 
+    \rangle}{\sqrt{\langle f;f\rangle \cdot \langle g;g\rangle}}\right)$} \\
+     & \multicolumn{2}{|l|}{$f \perp g\Leftrightarrow \langle f;g \rangle = 0$}
+     \\
+    
+    
+    \hline
+    
+  \end{tabular}
+
 
 \section{Diverses}
 \begin{tabbing}
