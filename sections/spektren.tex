@@ -1,5 +1,5 @@
-\skriptsection{Spektren}{103}
-\skriptsubsection{Spektraldarstellungen}{103ff} 
+\section{Spektren}
+\subsection{Spektraldarstellungen}
 
 \begin{figure}[htbp]
   \centering
@@ -24,21 +24,32 @@ Reelle Fourierkoeffizienten ($a_n, b_n$) können direkt abgelesen werden.
 Bei einer Phasenverschiebung ändern sich jedoch die Koeffizienten grafisch nicht nachvollziehbar. \\
 Diese Darstellung hat gegenüber den anderen zwei mehr Nachteile und wird daher eher selten genutzt.
 
-\subsubsection{(2) Einseitiges Amplituden-/Phasendiagramm} 
-$A_n = |a_n - j \cdot b_n| = \sqrt{a_n^2 + b_n^2}$ \text{ oder } $A_n = 2 \cdot |c_n| \qquad$
-$\Phi_n = \arg(a_n - j \cdot b_n) \text{ oder } \Phi_n = \arg(c_n) $ \\
-Spezialfall $n=0 \Rightarrow A_0 = |\frac{a_0}{2}| \text{ und } \Phi_0 = \left\{
-    \begin{array}{l} 
-      0, \quad a_0 \geq 0\\
-      \pi, \quad a_0 < 0  
-    \end{array}
-      \right. $
+\subsubsection{(2) Einseitiges Amplituden-/Phasendiagramm}
+\begin{tabular}{ll}
+	Amplitude $A$: &
+ 	$A_n = |a_n - j \cdot b_n| = \sqrt{a_n^2 + b_n^2}$ \text{ oder } $A_n =
+	2 \cdot |c_n|$ \\
+	
+	Phase $\varphi$: &
+	$\varphi_n = \arg(a_n - j \cdot b_n) \text{ oder } \varphi_n = \arg(c_n) $ \\
+	
+	Spezialfall: $n = 0$ &
+	$A_0 = |\frac{a_0}{2}| \text{und} \varphi_0 = 
+	\begin{cases}
+		0 & a_0 \geq 0 \\
+		\pi & a_0 < 0
+	\end{cases}$ \\
+	$c_n$ aus $A$ und $\varphi$: &
+	$c_n = \frac{1}{2}A_n \cdot e^{j \varphi n}$\\	
+\end{tabular}
+
 
 \subsubsection{(3) Zweiseitiges Amplituden-/Phasendiagramm (komplexes Spektrum)} 
 Amplitudendiagramm ist achsensymmetrisch wegen $ c_n=\overline{c_{-n}} $. Phasendiagramm ist punktsymmetrisch. \\
-Ähnlichkeit mit Einseitigem: $|c_k| = \frac{1}{2}A_k $ und $\arg(c_k) = \Phi_k$ für alle $ n \geq 0$.
+Ähnlichkeit mit Einseitigem: $|c_k| = \frac{1}{2}A_k $ und $\arg(c_k) =
+\varphi_k$ für alle $ n \geq 0$.
 
-\skriptsubsection{Spezialfälle}{106}
+\subsection{Spezialfälle}
 \begin{tabular}{ll}
   Funktion f gerade 
   & (1) Sinusamplitudendiagramm überall 0 \\
@@ -55,7 +66,6 @@ Amplitudendiagramm ist achsensymmetrisch wegen $ c_n=\overline{c_{-n}} $. Phasen
   Weisses Rauschen
   & "Uberlagerung von Schwingungen aller möglichen Frequenzen \\
   & mit gleichen Amplituden und zufälligen Phasen. 
-
 \end{tabular}
 
 \begin{center}
