@@ -1,7 +1,7 @@
 %Dokumentinformationen
 \newcommand{\titleinfo}{Complexe Zahlen, Fourierreihen - Formelsammlung}
 \newcommand{\authorinfo}{F. Braun, L. Schmid, U. Giger, R. Koller, E. Ammann, S.
-Arnold}
+Arnold, C.Gwerder, S.K\"orner}
 \newcommand{\versioninfo}{$Revision: 878 $ - powered by \LaTeX}
 
 % standard header
@@ -44,56 +44,70 @@ Arnold}
 \end{minipage}
 \begin{minipage}[t]{9.4cm}
 	\textbf{Polarsystem}\\
-	Normalform: 
+	Polarform: 
 	$z = r \cjs(\varphi) = r(\cos{\varphi} + j\sin{\varphi}) = r e^{j \varphi}$\\
 	$\varphi = \arg(z)$
 
 	Umrechnung in Cartesisch:\\
 	$z_1 = |z| \cos{\varphi}, \quad z_2 = |z| \sin{\varphi}$
 \end{minipage}
-\begin{center}
-{\textbf{Imaginäre Einheit} $\qquad j^2 = -1 \qquad e^{j\pi} = -1 \qquad
-\frac{1}{j} = -j$}
-\end{center}
+
+$\textbf{Imaginäre Einheit:} \qquad j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{1}{j} = -j \qquad e^{j\frac{\pi}{2}}= j \qquad j^j = e^{-\frac{\pi}{2}+2k\pi}$
+
 
 \skriptsubsection{Rechenregeln}{10ff}
-\begin{tabular}{ll}
-$+, -$
-&Selbige Regeln wie für $\mathbb{R}$\\
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| l | l |}
+\hline
+	$+, -$
+	& Selbige Regeln wie für $\mathbb{R}$\\
 
-Mulitplikation
-&$a \cdot b = 
-|a| |b| \cjs(\alpha + \beta) = 
-|a| |b| e^{j(\alpha + \beta)}$\\
+\hline
+	Mulitplikation
+	&$a \cdot b = 
+		|a| |b| \cjs(\alpha + \beta) = 
+		|a| |b| e^{j(\alpha + \beta)}$\\
 
-Division
-&$\left|\frac{a}{b}\right| = 
-\frac{\left|a\right|}{\left|b\right|} \cjs(\alpha - \beta) =
-\frac{\left|a\right|}{\left|b\right|} e^{j(\alpha - \beta)}$ (cartesisch: Mit
-conj. complex des Nenners erweitern) \\
+\hline
+	Division
+	&$\frac{a}{b} = 
+		\frac{\left|a\right|}{\left|b\right|} \cjs(\alpha - \beta) =
+		\frac{\left|a\right|}{\left|b\right|} e^{j(\alpha - \beta)}$ (cartesisch: Mit
+		conj. complex des Nenners erweitern) \\
 
-Conjugiert complex
-&$\overline{z} = \overline{z_1 + jz_2} = z_1 - jz_2; \qquad \qquad z \cdot \overline{z} = |z|^2$\\
+\hline
+	Conjugiert complex
+	&$\overline{z} = \overline{z_1 + jz_2} = z_1 - jz_2; \qquad \qquad z \cdot \overline{z} = |z|^2$\\
 
-Wurzeln
-&$\sqrt[n]{a} = \sqrt[n]{|a|} \cjs(\frac{arg(a)}{n}+k\frac{2\pi}{n}) = 
-\sqrt[n]{|a|} e^{j(\frac{\alpha}{n} + k \frac{2\pi}{n})} \quad (k = 0, 1,
-\ldots, n-1 \Rightarrow \text{n Lösungen in } \mathbb{C} !)$ \\
+\hline
+	Wurzeln
+	&$\sqrt[n]{a} = \sqrt[n]{|a|} \cjs(\frac{arg(a)}{n}+k\frac{2\pi}{n}) = 
+	\sqrt[n]{|a|} e^{j(\frac{\alpha}{n} + k \frac{2\pi}{n})} \quad (k = 0, 1,
+	\ldots, n-1 \Rightarrow \text{n Lösungen in } \mathbb{C} !)$ \\
 
-Potenzen
-&$a^n = |a|^n \cjs(n\alpha) = 
-|a|^n e^{jn\alpha}$\\
+\hline
+	Potenzen
+	&$a^n = |a|^n \cjs(n\alpha) = 
+	|a|^n e^{jn\alpha}$\\
 
-$e^z$ &$e^{z_1+jz_2} = e^{z_1} \cjs(z_2) = e^{z_1} (\cos{z_2} + j\sin{z_2})$\\
+\hline
+	$e^z$ &$e^{z_1+jz_2} = e^{z_1} \cjs(z_2) = e^{z_1} (\cos{z_2} + j\sin{z_2})$\\
 
-Moivre'sche Formel
-&$\text{cjs}^n(\varphi) =
-(\cos{\varphi} + j\sin{\varphi})^n = 
-\cos(n\varphi) +j\sin(n\varphi) \quad (n \in \mathbb{N})$\\
+\hline
+	Moivre'sche Formel
+	&$\text{cjs}^n(\varphi) =
+	(\cos{\varphi} + j\sin{\varphi})^n = 
+	\cos(n\varphi) +j\sin(n\varphi) \quad (n \in \mathbb{N})$\\
 
-Logarithmus
-&$Ln(z) = \ln{|z|} + j (\arg(z) + 2k \pi)$
+\hline
+	Logarithmus
+	&$Ln(z) = \ln{|z|} + j (\arg(z) + 2k \pi) \qquad a^b = e^{b\cdot Ln(a)} \rightarrow$ (keine Potenzgesetze) \\
+
+\hline
+	& $\frac{1}{\cjs{\varphi}} = \cjs{-\varphi}$ \\
+\hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}\\
 
 \begin{minipage}[t]{11.4cm}
 	\textbf{Bemerkungen}\\
@@ -111,7 +125,9 @@ Logarithmus
 	\textbf{Einheitswurzeln}\\
 	\includegraphics[width=7cm]{./bilder/einheitswurzel.png}
 \end{minipage}
-\subsection{12. Einheitswurzeln ($k 30 \symbol{23}$)}
+
+
+\subsection{12. Einheitswurzeln ($(k - 1) \cdot 30^{\circ}$)}
 $e^{(12)}_1 = 1,\;
 	e^{(12)}_2 = \frac{\sqrt3}{2} + \frac12j,\;
 	e^{(12)}_3 = \frac12 + \frac{\sqrt3}{2}j,\;
@@ -128,23 +144,26 @@ $e^{(12)}_1 = 1,\;
 \subsection{Nullstellen von Polynomen}
 Ein complexes Polynom p(z) von Grad $n$ hat in $ \mathbb{C} $ genau $n$ Nullstellen.\\
 Alle diese Nullstellen liegen in einer Kreisscheibe um den Ursprung mit dem Radius $ \sum\limits_{k=0}^{n} \left| \frac{a_k}{a_n} \right|$ \\ \\
-Bei Polynomen mit reellen Koeffizienten treten nicht-reelle Nullstellen immer
-als conj.-compl. Paare ($z_0$ und $\bar{z_0}$) auf. 
+Bei Polynomen mit reellen Koeffizienten treten nicht-reelle Nullstellen immer als conj.-compl. Paare ($z_0$ und $\bar{z_0}$) auf.\\
+Bei Polynomdivision immer mit reellen Zahlen arbeiten; conj.-compl. Paare zusammenfassen.
 
+\newpage
 \skriptsubsection{Euler}{30f}
-\begin{tabular}{llllll}
-$\sin{\alpha} = \frac{e^{j\alpha} - e^{-j\alpha}}{2j}$ &
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+	$\sin{\alpha} = \frac{e^{j\alpha} - e^{-j\alpha}}{2j}$ &
 
-$\cos{\alpha} = \frac{e^{j\alpha} + e^{-j\alpha}}{2}$ &
+	$\cos{\alpha} = \frac{e^{j\alpha} + e^{-j\alpha}}{2}$ &
 
-$\tan{\alpha} = \frac{\sin \alpha}{\cos \alpha}$ & 
+	$\tan{\alpha} = \frac{\sin \alpha}{\cos \alpha} = -j \frac{e^{j\alpha}-e^{-j\alpha}}{e^{j\alpha}+e^{-j\alpha}}$ & 
 
-$ \qquad \qquad $ &
+	$\sinh{\alpha} = \frac{e^\alpha - e^{-\alpha}}{2} $ &
 
-$\sinh{\alpha} = \frac{e^\alpha - e^{-\alpha}}{2} $ &
-
-$\cosh{\alpha} = \frac{e^\alpha + e^{-\alpha}}{2} $
+	$\cosh{\alpha} = \frac{e^\alpha + e^{-\alpha}}{2} $\\
+\hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}
 
 \skriptsubsection{Überlagerung von harmonischen Schwingungen}{32f}
 $$A \cdot \sin(\omega t + \varphi) = Im[A \cdot e^{j(\omega t + \varphi)}] =
@@ -166,29 +185,20 @@ $$ Im[e^{j \omega t} \cdot  (A_{total} \cdot e^{j \varphi_{total}})]
  \quad \Rightarrow \quad 
  Im[A_{total} \cdot e^{j (\omega t + \varphi_{total})}] 
  \quad \Rightarrow \quad 
- A_{total} \cdot \sin(\omega t + \varphi_{total})$$
+ A_{total} \cdot \sin(\omega t + \varphi_{total})$$ 
+$$A = |A_1 \cdot e^{j\varphi_1} + A_2 \cdot e^{j\varphi_2}| \qquad \varphi = arg(A_1 \cdot e^{j\varphi_1} + A_2 \cdot e^{j\varphi_2})$$
 
-%Bsp: 
-%$y = y_1 + y_2 = A_1 \sin(\omega t + \varphi_1) + A_2 \underbrace{\cos(\omega t
-%+ \varphi_2)}_{\text{\tiny{zu sin verwandeln}}}
-%= A_1 \sin(\omega t + \varphi_1) - A_2 \sin(\omega t + (\varphi_2
-%-\frac{\pi}{2}))$\\
-%$= \text{Im}(\underbrace{A_1 e^{j\varphi_1}}_{\text{\tiny{$A_{1im} = A_1 \cjs
-%A_1 \cdot \sin(\omega t + \varphi_1) + \varphi_1$}}} e^{j\omega t} - 
-%\underbrace{A_2 e^{j(\varphi_2 - \frac{\pi}{2})}}_{\text{\tiny{$A_{2im} = A_2 \cjs
-%(\varphi_2 - \frac{\pi}{2})$}}} e^{j \omega t}) 
-%= (A_{1im} + A_{2im}) \sin(\omega t)$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+%\newpage
 \skriptsection{Complexe Funktionen (Abbildungen)}{37ff}
 Eine complexe Funktion hat einen 2-dimensionalen Input ($z_1$, $z_2$) und einen
 2-dimensionalen Output ($w_1$, $w_2$). \\
 Diese Abbildungen sind bis jeweils auf wenige Punkte (bei der Sinus-Funktion
 $\pm$1, etc) winkeltreu.\\
 $ f: \mathbb{D} \subseteq \mathbb{C} \mapsto \mathbb{C} \qquad z  \mapsto w = f(z)$\\
-$w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc))$ 
+$w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc)) \qquad f'(z) = 0$ nicht winkeltreu! $\qquad f'(z) \neq 0$ winkeltreu! 
  
 
 \skriptsubsection{Lineare Funktion}{41ff}
@@ -208,18 +218,19 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc))$
     	$$ f : z \mapsto w = z^2 \qquad \qquad f : z \mapsto w = \sqrt{z} $$\\
 		Bei der Quadratfunktion wird schon die rechte Hälfte der z-Ebene auf die ganze
 		w-Ebene abgebildet (die Argumente werden verdoppelt). Daraus ergibt sich
-		zwei bzw. mehrere Ebenen.
+		zwei bzw. mehrere Ebenen.\\
+		Es ist überall Winkeltreu ausser im Koordinatenursprung!
     \end{minipage}
 	\hspace{2cm}
 	\begin{minipage}{8cm}
-    	\includegraphics[width=8cm]{./bilder/RiemannischeFlaeche.png} 
-    	Eine Riemanische Fläche 3.Grades
+    	\includegraphics[width=8cm]{./bilder/quadrat.png} 
     \end{minipage}
 
+\newpage
 \skriptsubsection{Kehrwertfunktion und Kreisspiegelung}{51ff}
-	$$ f : z \mapsto w = \frac{1}{z}; \quad (\arg(w) = -\arg(z), |w| = \frac{1}{|z|})
+	$$\underbrace{f : z \mapsto w = \frac{1}{z};}_\text{Spiegelung an x-Achse} \quad (\arg(w) = -\arg(z), |w| = \frac{1}{|z|})
 	\qquad \qquad 
-	\overline{f}: z \mapsto w = \frac{1}{\overline{z}};  \quad  
+	\underbrace{\overline{f}: z \mapsto w = \frac{1}{\overline{z}};}_\text{Kreisspiegelung}  \quad  
 	(\arg(w) = \arg(z), |w| = \frac{1}{|z|}) $$\\
 	Kreisspiegelung: Alle Punkte auf der z-Ebene werden am Einheitskreis gespiegelt.
 	Geraden auf Kreise abgebildet und umgekehrt. Der Ursprungspunkt (0;0) wird auf
@@ -232,7 +243,7 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc))$
         	xxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxx\kill
 	        - Gerade durch 0 $\Longrightarrow$ \>Fixgerade (gleiche Gerade, aber
 	        die \\ \>Punkte darauf sind anders verteilt)\\ \\
-			- Gerade nicht durch 0 $\Longrightarrow$ Kreis durch 0\\ \\ \\ \\ \\ \\ \\ \\
+			- Gerade nicht durch 0 $\Longrightarrow$ Kreis durch 0\\ \\ 
 			- Kreis nicht durch 0 $\Longrightarrow$ \>Spiegelung des Kreises\\ \> an dem
 			Einheitskreis\\ \\
 			- Kreis durch 0 $\Longrightarrow$\>Gerade nicht durch 0
@@ -240,55 +251,57 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc))$
 	\end{minipage}
 	\hspace{2cm}
 	\begin{minipage}{6cm}
-		\includegraphics[width=6cm]{./bilder/GeradeKreisspiegelung.png} 
-    	\includegraphics[width=6cm]{./bilder/KreisKreisspiegelung.png}
+		%\includegraphics[width=6cm]{./bilder/GeradeKreisspiegelung.png} 
+    		%\includegraphics[width=6cm]{./bilder/KreisKreisspiegelung.png}
+		\includegraphics[width=6cm]{./bilder/Kurvenspiegelung.png}
     \end{minipage}
 
-\skriptsubsection{Möbiustransformation}{57ff}
-	\begin{minipage}{10cm}
-		$$ f : z \mapsto w = f(z) = \frac{az + b}{cz + d}$$
-		$$(a, b, c, d \in 
-		\mathbb{C} \text{ mit } c \neq 0 \text{ und } ad - bc \neq 0) $$
-		Die Möbiustransformation ist eine Verkettung einer linearen Funktion, der Kehrwertfunktion und einer weiteren linearen Funktion. \\
-		Diese Transformationen sind winkel- und kreistreu. Die Umkehrfunktion ergibt wieder eine Möbiustransformation. \\
-		Eigentlich besitzt diese Funktion nur drei Parameter da man den Bruch
-		$\frac{az + b}{cz + d}$ stets so kürzen kann dass einer der vier Parameter 1
-		ist. Durch die 3 Freiheitsgrade kann man unterschiedlichste kriterien
-		vorgeben und damit komplizierte Umformungen machen, wie im Bild gezeigt wird:
-	
-	\end{minipage}
-	\hspace{2cm}
-	\begin{minipage}{7cm}
-		\includegraphics[width=7cm]{./bilder/Moebiustransformation.png} 
-	\end{minipage}
 
-\skriptsubsection{Joukowski-Funktion}{60ff}
-	\begin{minipage}{10cm}
-		$$ f : z \mapsto w = z + \frac{1}{z}  $$
-		Die Funktion ist winkeltreu bis auf $\pm$2\\
-		Wenn man einen Kreis, der nicht ganz im Zentrum steht transformiert ergibt
-		sich ein Flügelprofil
-	\end{minipage}
-	\hspace{2cm}
-	\begin{minipage}{7cm}
-		\includegraphics[width=7cm]{./bilder/joukowskiFunktion.png} 
-
-	\end{minipage}
-\skriptsubsection{Exponentialfunktion}{64ff} 
-	\begin{minipage}{9cm}
-		$$ f : z \mapsto w = e^z $$
-		Waagrechte Gitternetzlinen gehen gemäss der obigen Gleichung in Strahlen
-		über, die im Koordinatenursprung beginnen, senktrechte Gitternetzlinien in
-		Kreise um den Koordinatenursprung. Die e$^z$-Funktion ist periodisch, deshalb
-		braucht es eine Riemansche Fläche\\ \\
-		Mit dieser Funktion kann man das Feld bei den Rändern des Plattenkondensator
-		berechnen 
-	\end{minipage}
-	\hspace{2cm}
-	\begin{minipage}{7cm}
-		\includegraphics[width=7cm]{./bilder/ehochz.png} 
-		\includegraphics[width=8cm]{./bilder/plattenkondensator.png} 		
-	\end{minipage}
+%\skriptsubsection{Möbiustransformation}{57ff}
+%	\begin{minipage}{10cm}
+%		$$ f : z \mapsto w = f(z) = \frac{az + b}{cz + d}$$
+%		$$(a, b, c, d \in 
+%		\mathbb{C} \text{ mit } c \neq 0 \text{ und } ad - bc \neq 0) $$
+%		Die Möbiustransformation ist eine Verkettung einer linearen Funktion, der Kehrwertfunktion und einer weiteren linearen Funktion. \\
+%		Diese Transformationen sind winkel- und kreistreu. Die Umkehrfunktion ergibt wieder eine Möbiustransformation. \\
+%		Eigentlich besitzt diese Funktion nur drei Parameter da man den Bruch
+%		$\frac{az + b}{cz + d}$ stets so kürzen kann dass einer der vier Parameter 1
+%		ist. Durch die 3 Freiheitsgrade kann man unterschiedlichste kriterien
+%		vorgeben und damit komplizierte Umformungen machen, wie im Bild gezeigt wird:
+%	
+%	\end{minipage}
+%	\hspace{2cm}
+%	\begin{minipage}{7cm}
+%		\includegraphics[width=7cm]{./bilder/Moebiustransformation.png} 
+%	\end{minipage}
+%
+%\skriptsubsection{Joukowski-Funktion}{60ff}
+%	\begin{minipage}{10cm}
+%		$$ f : z \mapsto w = z + \frac{1}{z}  $$
+%		Die Funktion ist winkeltreu bis auf $\pm$2\\
+%		Wenn man einen Kreis, der nicht ganz im Zentrum steht transformiert ergibt
+%		sich ein Flügelprofil
+%	\end{minipage}
+%	\hspace{2cm}
+%	\begin{minipage}{7cm}
+%		\includegraphics[width=7cm]{./bilder/joukowskiFunktion.png} 
+%
+%	\end{minipage}
+%\skriptsubsection{Exponentialfunktion}{64ff} 
+%	\begin{minipage}{9cm}
+%		$$ f : z \mapsto w = e^z $$
+%		Waagrechte Gitternetzlinen gehen gemäss der obigen Gleichung in Strahlen
+%		über, die im Koordinatenursprung beginnen, senktrechte Gitternetzlinien in
+%		Kreise um den Koordinatenursprung. Die e$^z$-Funktion ist periodisch, deshalb
+%		braucht es eine Riemansche Fläche\\ \\
+%		Mit dieser Funktion kann man das Feld bei den Rändern des Plattenkondensator
+%		berechnen 
+%	\end{minipage}
+%	\hspace{2cm}
+%	\begin{minipage}{7cm}
+%		\includegraphics[width=7cm]{./bilder/ehochz.png} 
+%		\includegraphics[width=8cm]{./bilder/plattenkondensator.png} 		
+%	\end{minipage}
 
 \skriptsubsection{Sinus-Funktion}{67f}
 	 \begin{minipage}{10cm}
@@ -310,8 +323,8 @@ z\overline{z} - \overline{m}z - m\overline{z} + m\overline{m} = r^2$$
 $$ \text{Parameterform: } f(t) = m + r \cdot e^{jt}, \quad \text{mit } (0 \leq t \leq 2 \pi) $$
 
 
-\newpage
-\skriptsection{Fourierreihen}{67ff}
+%\newpage
+\skriptsection{Fourierreihen}{70ff}
     \skriptsubsection{Orthogonalitätsbeziehungen der Basisfunktionen}{75}
         \begin{tabular}{lll}
             $\int\limits_0^T \cos(n\omega t)\cdot \cos(m\omega t)dt=
@@ -325,72 +338,74 @@ $$ \text{Parameterform: } f(t) = m + r \cdot e^{jt}, \quad \text{mit } (0 \leq t
             \frac{T}{2},\ n=m\\
             0,\ n\neq m\\
             \end{cases}$&
-            $\int\limits_0^T \cos(n\omega t)\cdot \sin(m\omega t)dt=0$
+            $\int\limits_0^T \cos(n\omega t)\cdot \sin(m\omega t)dt=0$\\
+
+	$(m,n \in \mathbf{N_0})$ &
+	$(m,n \in \mathbf{N})$ &
+	$(m \in \mathbf{N_0} ; n \in \mathbf{N})$
         \end{tabular}
+
 	\skriptsubsection{Allgemeine Form}{79}
 		Eine periodische Funktion f mit Periode $T>0$, lässt sich durch eine Reihe von
 		Sinus- und Kosinusfunktionen darstellen, deren Frequenzen ganzzahlige 
 		Vielfache der Grundfrequenz $\omega = 2\pi / T$ sind:
-		$$ f(t)=\frac{a_0}{2} + \sum_{n=1}^\infty (a_n \cdot \cos(n \omega t) + b_n
+		$$ FR[f(t)] = f(t) =\frac{a_0}{2} + \sum_{n=1}^\infty (a_n \cdot \cos(n \omega t) + b_n
 		\cdot \sin(n\omega t))$$
 		Die Koeffizienten der Entwicklung von $f(t)$ sind:
 		$$ a_n=\frac{2}{T}\int_{0}^{T} f(t) \cdot \cos(n\omega t)\, \mathrm{d}t \quad (n=0,1,2,3,\ldots)
 		 \qquad \qquad b_n=\frac{2}{T}\int_{0}^{T} f(t) \cdot \sin(n\omega t)\,
-		 \mathrm{d}t \quad (n=1,2,3,\ldots) $$
+		 \mathrm{d}t \quad (n=1,2,3,\ldots) $$ 
 		Der erste Summand der Reihe $a_0/2$ ist der Gleichstromanteil (Mittelwert) von
 		$f(t)$ im Intervall $(0,T)$
 
 	\skriptsubsection{Komplexwertige Darstellung der Fourierreihen}{95ff}
-		$$f(t) = \sum\limits_{k = -\infty}^{\infty} c_k \cdot e^{j k \omega t} \qquad \text{mit} \qquad c_n=\overline{c_{-n}}=\frac{1}{T}\int_0^T{f(t)\cdot e^{-jn\omega t}dt}$$
+		$$f(t) = \sum\limits_{k = -\infty}^{\infty} c_k \cdot e^{j k \omega t} \qquad \text{mit} \qquad c_n=\overline{c_{-n}}=\frac{1}{T}\int_0^T{f(t)\cdot e^{-jn\omega t}dt} \qquad (n \in \mathbf{N_0})$$
 		\subsubsection{Umrechnungsformeln}
 			$$c_n=\overline{c_{-n}}=\frac{a_n-jb_n}{2} (n=0,1,2,3,\ldots\text{ wobei }b_0=0)\qquad
 			\left.
 			\begin{array}{l} 
-				a_n=2 \cdot \text{Re}(c_n)\\
-				b_n=-2 \cdot \text{Im}(c_n)
+				a_n=2Re(c_n) = c_n + c_{-n}\\
+				b_n=-2Im(c_n) = j(c_n - c_{-n})
 			\end{array}
 		    \right\} 
-		    \quad
-			(n=0,1,2,3,\ldots, b_0 = 0)$$
+		    \quad \begin{array}{l}
+				(n \in \mathbf{N_0}) \\
+				(n \in \mathbf{N})
+			\end{array}$$ \\
+		$c_0 = \frac{a_0}{2} \qquad c_{-n} = \frac{a_n + jb_n}{2}$
 
-	\skriptsubsection{LTI-Systeme}{72} 
-	    \subsubsection{Linear}
-	    \begin{tabular}{llll}
-            \textbf{Aus}: &
-            $f(t)\to \fbox{S}\to F(t)$ &
-            und &
-            $g(t)\to \fbox{S}\to G(t)$ \\
-            \textbf{folgt} &
-            $f(t)+g(t)\to \fbox{S}\to F(t)+G(t)$ &
-            und &
-            $r\cdot f(t)\to\fbox{S}\to r\cdot F(t)$ \\
-        \end{tabular}
-        \subsubsection{Zeitinvarianz}
-        \begin{tabular}{llll}
-            \textbf{Aus} &
-            $f(t)\to \fbox{S}\to F(t)$ &
-            \textbf{folgt} &
-            $f(t+t_0)\to \fbox{S}\to F(t+t_0)$\\
-        \end{tabular}
+	  
 	\skriptsubsection{Sätze zur Berechnung der Koeffizienten}{80ff}
-		\skriptsubsubsection{Symmetrie}{80f}
-		\begin{tabular}{ll}
-   			Falls $f(t)$ \textbf{gerade} ($ f(-t)=f(t) $) ist 
-   			& $\quad \Longrightarrow \quad 
-			b_n = 0, \quad a_n = \frac{4}{T} \int\limits_0^{\frac{T}{2}} f(t) \cdot
-			\cos(n \omega t) \mathrm{d}t$ \\
-			Falls $f(t)$ \textbf{ungerade} ($ f(-t)=-f(t) $) ist
-			&$\quad \Longrightarrow \quad a_n = 0, \quad b_n =  \frac{4}{T} 
-			\int\limits_0^{\frac{T}{2}} f(t) \cdot \sin(n \omega t) \mathrm{d}t$
+		\skriptsubsubsection{Symmetrie}{78}
+		Allgemein:$\qquad$ gerade $\cdot$ ungerade $=$ ungerade; $\qquad$ ungerade $\cdot$ ungerade $=$ gerade $\cdot$ gerade $=$ gerade
+
+		\begin{tabular}{l l l l l}
+   			Falls $f(t)$ \textbf{gerade} ($ f(-t)=f(t) $) ist &
+   			$\Longrightarrow$ & 
+			$b_n = 0,$ &
+			$a_n = \frac{4}{T} \int\limits_0^{\frac{T}{2}} f(t) \cdot \cos(n \omega t) \mathrm{d}t$ &
+			$Im[c_n] = 0$ \\
+			
+			& & \multicolumn{3}{l} {wenn $f(t)$ gerade ist bezgl. $\frac{T}{4} \Rightarrow a_{2m+1} = 0$}\\
+			& & \multicolumn{3}{l} {wenn $f(t)$ ungerade ist bezgl. $\frac{T}{4} \Rightarrow a_{2m} = 0$}\\
+
+			Falls $f(t)$ \textbf{ungerade} ($ f(-t)=-f(t) $) ist &
+			$\Longrightarrow$ &
+			$a_n = 0,$ &
+			$b_n =  \frac{4}{T}\int\limits_0^{\frac{T}{2}} f(t) \cdot \sin(n \omega t) \mathrm{d}t$ &
+			$ Re[c_n] = 0$\\
+
+			& & \multicolumn{3}{l} {wenn $f(t)$ gerade ist bezgl. $\frac{T}{4} \Rightarrow b_{2m} = 0$}\\
+			& & \multicolumn{3}{l} {wenn $f(t)$ ungerade ist bezgl. $\frac{T}{4} \Rightarrow b_{2m+1} = 0$}\\
       	\end{tabular}
 			 
-		\skriptsubsubsection{Linearität}{82}
+		\skriptsubsubsection{Linearität}{81}
 			$h(t) = r \cdot f(t) + s \cdot g(t) \quad \Longrightarrow \quad a_n^{(h)} = r \cdot
 			a_n^{(f)} + s \cdot a_n^{(g)}, \quad b_n^{(h)} = r \cdot b_n^{(f)} + s \cdot b_n^{(g)}$
 			
-		\skriptsubsubsection{Zeitstreckung/-stauchung ("Ahnlichkeit)}{83}
+		\skriptsubsubsection{Zeitstreckung/-stauchung ("Ahnlichkeit)}{82}
 			$g(t) = f(r \cdot t) $ (mit $ 0 < r \in \mathbb{R}$ ) $\quad \Longrightarrow\quad  
-			a_n^{(g)} = a_n^{(f)}, \quad b_n^{(g)} = b_n^{(f)} $ \quad $T^{(g)} = \frac{T^{(f)}}{r}$.
+			a_n^{(g)} = a_n^{(f)}, \quad b_n^{(g)} = b_n^{(f)} $ \quad $T^{(g)} = \frac{T^{(f)}}{r} \qquad \omega_g = \frac{2\pi}{T_g}$.
 			
 		\skriptsubsubsection{Zeitverschiebung}{84} 
 		\label{Fourier_Zeitverschiebung}
@@ -399,63 +414,47 @@ $$ \text{Parameterform: } f(t) = m + r \cdot e^{jt}, \quad \text{mit } (0 \leq t
 		\begin{array}{l}
            a_n^{(g)}=\cos(n\omega t_0)\cdot a_n^{(f)}+\sin(n\omega t_0)\cdot b_n^{(f)}\\
            b_n^{(g)}=-\sin(n\omega t_0)\cdot a_n^{(f)}+\cos(n\omega t_0)\cdot b_n^{(f)}\\
-           c_n^{(g)}=e^{jk \omega t_o} \cdot c_k^{(f)}
+           c_k^{(g)}=e^{jk \omega t_o} \cdot c_k^{(f)}
         \end{array}$
         $\quad
 		\begin{array}{l}
-           (n=0,1,2,\ldots)\\
+           (n=0,1,2,\ldots)  \qquad \text{mit }b_0 = 0\\
            (n=1,2,3,\ldots)\\
            (k \in \mathbb{Z})
         \end{array}$ \\
+
+\skriptsubsection{Satz von Dirichlet}{89}
+	Die Funktion $f(t)$ seit $T$-periodisch und stückweise stetig mit Limes, dann konvergiert ihre Fouriereihe gegen\\
+	$$FR[f(t_0)] = f(t_0) = \frac{f(t_{0-}) + f(t_{0+})}{2}$$
+	Somit in die Mitte einer Sprungstelle oder dem Funktionswert selber.
+
+
+\skriptsubsection{Abstand f - g}{84}
+Abstand zweier $T$-periodischen, mit Limes stückweise stetigen Funktionen $f$ und $g$.
+$$||f - g|| = \sqrt{\frac{2}{T}\int\limits_0^2[f(t) - g(t)]^2 \mathrm dt} $$
+
+\skriptsubsection{Praval'sche Gleichung}{97}
+$$\sum\limits_{k = -\infty}^{\infty}|c_k|^2 = \frac{1}{T}\int\limits_{0}{T}[f(t)]^2\mathrm dt$$
 		
 \skriptsubsection{Integral und Differential}{88}
 Falls die T-periodische Funktion $f$ (auf ganz $\mathbb{R}$) zweimal stetig differenzierbar ist und die Fourierkoeffizienten $a_n$ und $b_n$ besitzt, so gilt:
 $$ f'(t) = \sum\limits_{n=1}^{\infty} [b_n n \omega \cdot \cos{(n \omega t)} - a_n n \omega \cdot \sin{(n \omega t)}]
-\qquad \qquad \int\limits_0^t f(\tau) d\tau = \sum\limits_{n=1}^{\infty} \frac{b_n}{n \omega} + 
+\qquad \qquad \int\limits_0^t f(\tau) d\tau = \sum\limits_{n=1}^{\infty} [\frac{b_n}{n \omega}] + 
 \frac{a_0}{2} t + \sum\limits_{n=1}^{\infty}
 [\frac{a_n}{n \omega} \cdot \sin{(n \omega t)} - \frac{b_n}{n \omega} \cdot \cos{(n \omega t)}] $$
 
 \skriptsubsection{Gibbs'sches Phänomen}{92f}
-Die Fourier-Reihen schwingen bei Unstetigkeitsstellen über. Die Höhe des
-Überschwingers lässt sich so berechnen:
+
 
 \begin{figure}[htbp]
-	\begin{minipage}[b]{8cm}
-$$\frac{1}{\pi}\int\limits_0^\pi \frac{\sin t}{t}\, \mathrm dt - \frac{1}{2} =
-0{,}089490\dots$$ \\
+	\begin{minipage}[c]{8cm}
+		Die Fourier-Reihen schwingen bei Unstetigkeitsstellen über. Die Höhe der grössten überschwingenden Welle
+		beträgt 8.94\% der gesamten Sprunghöhe.
 	\end{minipage}
-	\begin{minipage}[b]{8cm}
+	\begin{minipage}[c]{8cm}
 		\includegraphics[width=8cm]{./bilder/gibssches_phaenomen.png}  
 	\end{minipage}
 \end{figure}
-
-\skriptsubsection{Frequenz-, Amplituden- und Phasengang}{72}
-$ \text{Frequenzgang eines Systems: } H(\omega) = A(\omega) \cdot e^{j \Phi(\omega)} \qquad 
-\text{ Amplitudengang: } A(\omega) = |H(\omega)| \qquad \text{ Phasengang } \Phi(\omega) = arg[H(\omega)] $ \\ \\
-Die komplexe Funktion $H(\omega)$ der reellwertigen Frequenz $\omega$ enthält zugleich die Informationen über 
-die Veränderung der Amplitude und der Phasenverschiebung des Systems S bei der betrachteten Frequenz $\omega$.
-$$f(t) = Im[z(t)] \to \fbox{S}\to F(t) = Im[z(t) \cdot H(\omega)] \qquad \text{ oder } 
-\qquad f(t) = Re[z(t)] \to \fbox{S}\to F(t) = Re[z(t) \cdot H(\omega)]$$
-Je nach Eingangssignal wird der Real- oder der Imaginärteil behandelt: 
-$ f(t) = 
-		\left\{
-		\begin{array}{l}
-           sin(n t) = Im[e^{j \cdot n t}]\\
-           cos(n t) = Re[e^{j \cdot n t}]
-        \end{array}
-		\right\}
-\Longrightarrow
-z(t) = e^{j \cdot n t}
-$ \\
-
-Somit kann die Antwort des Systems mittels einer komplexen Multiplikation mit der Hilfsfunktion $z(t)$ berechnet werden.
-
-
-\begin{center}
-\includegraphics[width=18cm]{./bilder/integral2.png}
-\end{center}
-
-
 
 
 \newpage
@@ -464,18 +463,18 @@ Somit kann die Antwort des Systems mittels einer komplexen Multiplikation mit de
 
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}[b]{5.5cm}
-		\includegraphics[width=5.5cm]{./bilder/spektren_cossin.png}
+	\begin{minipage}[b]{5.7cm}
+		\includegraphics[width=5.7cm]{./bilder/spektren_cossin.png}
 		\caption{Kosinus- und Sinusamplitudendiagramm} 
 	\end{minipage}
-	\hspace{1cm}
-	\begin{minipage}[b]{5.5cm}
-		\includegraphics[width=5.5cm]{./bilder/spektren_einseitig.png} 
+	\hspace{0.5cm}
+	\begin{minipage}[b]{5.7cm}
+		\includegraphics[width=5.7cm]{./bilder/spektren_einseitig.png} 
 		\caption{Einseitiges Amplituden-/Phasendiagramm} 
 	\end{minipage}
-	\hspace{1cm}
-	\begin{minipage}[b]{5.5cm}
-		\includegraphics[width=5.5cm]{./bilder/spektren_zweiseitig.png} 
+	\hspace{0.5cm}
+	\begin{minipage}[b]{5.7cm}
+		\includegraphics[width=5.7cm]{./bilder/spektren_zweiseitig.png} 
 		\caption{Zweiseitiges Amplituden-/Phasendiagramm} 
 	\end{minipage}
 \end{figure}
@@ -485,19 +484,25 @@ Reelle Fourierkoeffizienten ($a_n, b_n$) können direkt abgelesen werden.
 Bei einer Phasenverschiebung ändern sich jedoch die Koeffizienten grafisch nicht nachvollziehbar. \\
 Diese Darstellung hat gegenüber den anderen zwei mehr Nachteile und wird daher eher selten genutzt.
 
+$$a_n = A_n \cdot \cos(\varphi_n) \qquad b_n = -A_n \cdot \sin(\varphi_n) = A_n \sin(-\varphi_n)$$
+
+
 \subsubsection{(2) Einseitiges Amplituden-/Phasendiagramm} 
 $A_n = |a_n - j \cdot b_n| = \sqrt{a_n^2 + b_n^2}$ \text{ oder } $A_n = 2 \cdot |c_n| \qquad$
-$\Phi_n = \arg(a_n - j \cdot b_n) \text{ oder } \Phi_n = \arg(c_n) $ \\
-Spezialfall $n=0 \Rightarrow A_0 = |\frac{a_0}{2}| \text{ und } \Phi_0 = \left\{
+$\varphi_n = \arg(a_n - j \cdot b_n) \text{ oder } \varphi_n = \arg(c_n) $ \\
+Spezialfall $n=0 \Rightarrow A_0 = |\frac{a_0}{2}| \text{ und } \varphi_0 = \left\{
 		\begin{array}{l} 
 			0, \quad a_0 \geq 0\\
 			\pi, \quad a_0 < 0  
 		\end{array}
-	    \right. $
+	    \right. $\\
+
 
 \subsubsection{(3) Zweiseitiges Amplituden-/Phasendiagramm (komplexes Spektrum)} 
 Amplitudendiagramm ist achsensymmetrisch wegen $ c_n=\overline{c_{-n}} $. Phasendiagramm ist punktsymmetrisch. \\
-Ähnlichkeit mit Einseitigem: $|c_k| = \frac{1}{2}A_k $ und $\arg(c_k) = \Phi_k$ für alle $ n \geq 0$.
+Ähnlichkeit mit Einseitigem: $|c_n| = \frac{1}{2}A_k $ und $\arg(c_n) = \varphi_k$ für alle $ n \geq 0$.\\
+$$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = arg(a_n - jb_n) \qquad c_n = \frac{A_n}{2} \cdot e^{j\varphi_n}$$
+
 
 \skriptsubsection{Spezialfälle}{106}
 \begin{tabular}{ll}
@@ -519,62 +524,6 @@ Amplitudendiagramm ist achsensymmetrisch wegen $ c_n=\overline{c_{-n}} $. Phasen
 
 \end{tabular}
 
-\begin{center}
-\includegraphics[width=18cm]{./bilder/integral1.png}
-\end{center}
-
-
-
-
-
-\newpage 
-\skriptsection{DFT - Diskrete Fourier Transformation}{109}
-\subsection{Definitionen}
-\includegraphics[width=5cm]{./bilder/abtastung.png}
-
-\subsubsection{Diskrete komplexe Fourierkoeffizienten}
-$\hat{c_k}$ sind die diskreten Fourierkoeffizienten die zu den (reellen
-Abtastwerten $f_0, f_1,\ldots,f_{N-1}$) gehören\\
-$$\hat{c_k}=\frac{1}{N}\sum\limits_{n=0}^{N-1}f_n\cdot e^{-\frac{2\pi j}{N}\cdot
-kn}$$
-Kompakte Darstellung mit der Matrix W:
-$\begin{pmatrix}
- \hat{c_0}\\\hat{c_1}\\\hat{c_2}\\\hat{c_3}
-\end{pmatrix}$
-$=\frac{1}{N}$
-$\begin{pmatrix}
- w^0w^0w^0w^0\\w^0w^1w^2w^3\\w^0w^2w^4w^6\\w^0w^3w^6w^9
-\end{pmatrix}$
-$\cdot$
-$\begin{pmatrix}
- f_0\\f_1\\f_2\\f_3
-\end{pmatrix}$
-wobei $w=e^{-\frac{2\pi j}{N}}$
-
-\subsubsection{Rechenaufwand DFT / FFT}
-Der Rechenaufwand für die DFT ist proportional zu $N^2$ 
-hingegen ist er bei der Fast Fourier Transform (FFT) nur $N\cdot log(N)$.
-
-\skriptsubsection{Eigenschaften der Diskreten Fouriertransformation}{112}
-\subsubsection{Alias-Effekt}
-Mit $\hat{c_k}(\hat{c_0},\ldots,\hat{c_N-1})$ kennt man alle disktreten Fourierkoeffizienten. Es gilt:
-$\hat{c_k}=\sum\limits_{l=-\infty}^{\infty}c_k+l\cdot N \quad l\in Z$
-
-\subsubsection{Nyquist-Shannon-Abtasttheorem}
-Ein Signal muss mit mindestens der doppelten Frequenz seines höchstfrequentigen Anteils abgetastet werden.
-
-\skriptsubsection{Inverse Diskrete Fouriertransformation iDFT}{116}
-\subsubsection{Abtastwerte berechnen}
-Die N diskreten Fourierkoeffizienten lassen sich mit der iDFT wieder auf ihre Abtastwerte $f_n$ zurückführen.
-$$f_n=\sum\limits_{k=0}^{N-1}(\hat{c_k}\cdot e^{\frac{2\pi j}{N}\cdot nk})$$
-\subsubsection{Kontinuirliche Funktion berechnen}
-Die N diskreten Fourierkoeffizienten lassen sich auch auf die kontinuirliche Funktion $f(t)$ zurückführen.
-$$t\mapsto \sum\limits_{k=0}^{N-1}(\hat{c_k}e^{jk\omega_0t})$$ 
-ist eine Funktion die diese diskreten Fourierkoeffizienten besitzt.
-für $k=1,2,\ldots,\frac{N}{2}$ so ist auch 
-$$t\mapsto\hat{c_k}+\sum\limits{k=1}{\frac{N}{2}-1}[2 
-Re(\hat{c_k}e^jk\omega_0t)]+\hat{c_\frac{N}{2}}\cdot \cos(\frac{N}{2}\omega_0t)$$
-eine reelle Funktion mit halb so grossen höchsten Frequenzen. 
 
 \newpage
 \label{LastPage}
@@ -708,6 +657,13 @@ eine reelle Funktion mit halb so grossen höchsten Frequenzen.
 	\\Partielle Integration: $\int u(x) v'(x) dx = u(x)v(x) - \int u'(x) v(x) dx$
 \end{tabbing}
 
+\begin{center}
+\includegraphics[width=18cm]{./bilder/integral1.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=18cm]{./bilder/integral2.png}
+\end{center}
 
 
 
