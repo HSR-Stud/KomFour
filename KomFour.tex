@@ -4,22 +4,9 @@
 \newcommand{\versioninfo}{$Revision: 2.1 $ - powered by \LaTeX}
 
 % standard header
-\include{header} % ./header.tex nicht editieren (Projekt LaTeX-Header
+%\include{header} % ./header.tex nicht editieren (Projekt LaTeX-Header
 %benutzen)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Neue Befehle und Definitionen                
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{black}{rgb}{0,0,0} 
-\definecolor{red}{rgb}{1,0,0}
-\definecolor{white}{rgb}{1,1,1}
-\definecolor{grey}{rgb}{0.8,0.8,0.8}
-\newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}}
-
-% Titel
-\newcommand{\skriptsection}[2]{\section{#1 {\tiny Skript S. #2}}}
-\newcommand{\skriptsubsection}[2]{\subsection{#1 {\tiny Skript S. #2}}}
-\newcommand{\skriptsubsubsection}[2]{\subsubsection{#1 {\tiny Skript S. #2}}}
+\include{header/header}
 
 % Mathematische Operatoren
 \DeclareMathOperator{\cjs}{cjs}
