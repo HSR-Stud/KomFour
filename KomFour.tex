@@ -1,7 +1,7 @@
 %Dokumentinformationen
 \newcommand{\titleinfo}{Complexe Zahlen, Fourierreihen - Formelsammlung}
 \newcommand{\authorinfo}{F. Braun, L. Schmid, U. Giger, R. Koller, E. Ammann, S.
-Arnold, C.Gwerder, S.K\"orner}
+Arnold, C.Gwerder, S.K\"orner, L.Leuenberger}
 \newcommand{\versioninfo}{$Revision: 878 $ - powered by \LaTeX}
 
 % standard header
@@ -101,7 +101,7 @@ $\textbf{Imaginäre Einheit:} \qquad j^2 = -1 \qquad e^{j\pi} = -1 \qquad \frac{
 
 \hline
 	Logarithmus
-	&$Ln(z) = \ln{|z|} + j (\arg(z) + 2k \pi) \qquad a^b = e^{b\cdot Ln(a)} \rightarrow$ (keine Potenzgesetze) \\
+	&$Ln(z) = \ln{|z|} + j (\arg(z) + 2k \pi)=\ln|a|+j\arg(a) \qquad a^b = e^{b\cdot Ln(a)} \rightarrow$ (keine Potenzgesetze) \\
 
 \hline
 	& $\frac{1}{\cjs{\varphi}} = \cjs{-\varphi}$ \\
@@ -147,7 +147,6 @@ Alle diese Nullstellen liegen in einer Kreisscheibe um den Ursprung mit dem Radi
 Bei Polynomen mit reellen Koeffizienten treten nicht-reelle Nullstellen immer als conj.-compl. Paare ($z_0$ und $\bar{z_0}$) auf.\\
 Bei Polynomdivision immer mit reellen Zahlen arbeiten; conj.-compl. Paare zusammenfassen.
 
-\newpage
 \skriptsubsection{Euler}{30f}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{| l | l | l | l | l |}
@@ -225,7 +224,33 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc)) \qquad f'(z) = 0$ nicht wink
 	\begin{minipage}{8cm}
     	\includegraphics[width=8cm]{./bilder/quadrat.png} 
     \end{minipage}
+    
+\skriptsubsection{Sinus-Funktion}{67f}
+	 \begin{minipage}{10cm}
+		$$ f : z \mapsto w = \sin(z) $$    
+		Die Sinusfunktion ist ausser bei den Punkten $z = \frac{\pi}{2}+ k\pi (k \in
+		\mathbb{Z}))$ winkeltreu
+	\end{minipage}
+	\hspace{2cm}
+	\begin{minipage}{7cm}
+		\includegraphics[width=7cm]{./bilder/sinus.png} 
+	
+	\end{minipage}
 
+\skriptsubsection{Exponentialfunktion}{64ff} 
+	\begin{minipage}{11cm}
+		$$ f : z \mapsto w = e^z $$
+		Waagrechte Gitternetzlinen gehen gemäss der obigen Gleichung in Strahlen
+		über, die im Koordinatenursprung beginnen, senktrechte Gitternetzlinien in
+		Kreise um den Koordinatenursprung. Die e$^z$-Funktion ist periodisch, deshalb
+		braucht es eine Riemansche Fläche\\ \\
+		Mit dieser Funktion kann man das Feld bei den Rändern des Plattenkondensator
+		berechnen 
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{7cm}
+		\includegraphics[width=7cm]{./bilder/exponentional.png} 		
+	\end{minipage}
 \newpage
 \skriptsubsection{Kehrwertfunktion und Kreisspiegelung}{51ff}
 	$$\underbrace{f : z \mapsto w = \frac{1}{z};}_\text{Spiegelung an x-Achse} \quad (\arg(w) = -\arg(z), |w| = \frac{1}{|z|})
@@ -287,33 +312,9 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc)) \qquad f'(z) = 0$ nicht wink
 %		\includegraphics[width=7cm]{./bilder/joukowskiFunktion.png} 
 %
 %	\end{minipage}
-%\skriptsubsection{Exponentialfunktion}{64ff} 
-%	\begin{minipage}{9cm}
-%		$$ f : z \mapsto w = e^z $$
-%		Waagrechte Gitternetzlinen gehen gemäss der obigen Gleichung in Strahlen
-%		über, die im Koordinatenursprung beginnen, senktrechte Gitternetzlinien in
-%		Kreise um den Koordinatenursprung. Die e$^z$-Funktion ist periodisch, deshalb
-%		braucht es eine Riemansche Fläche\\ \\
-%		Mit dieser Funktion kann man das Feld bei den Rändern des Plattenkondensator
-%		berechnen 
-%	\end{minipage}
-%	\hspace{2cm}
-%	\begin{minipage}{7cm}
-%		\includegraphics[width=7cm]{./bilder/ehochz.png} 
-%		\includegraphics[width=8cm]{./bilder/plattenkondensator.png} 		
-%	\end{minipage}
 
-\skriptsubsection{Sinus-Funktion}{67f}
-	 \begin{minipage}{10cm}
-		$$ f : z \mapsto w = \sin(z) $$    
-		Die Sinusfunktion ist ausser bei den Punkten $z = \frac{\pi}{2}+ k\pi (k \in
-		\mathbb{Z}))$ winkeltreu
-	\end{minipage}
-	\hspace{2cm}
-	\begin{minipage}{7cm}
-		\includegraphics[width=7cm]{./bilder/sinus.png} 
-	
-	\end{minipage}
+
+
  
 \subsection{Kreisgleichung}
 Die Lösungen von z bilden einen Kreis in der mit dem Radius $r$ um den Mittelpunkt $M=(m_x, m_y) \Rightarrow m=m_x + j m_y$. \\
