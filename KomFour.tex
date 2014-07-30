@@ -239,7 +239,7 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc)) \qquad f'(z) = 0$ nicht wink
 
 \skriptsubsection{Exponentialfunktion}{64ff} 
 	\begin{minipage}{11cm}
-		$$ f : z \mapsto w = e^z $$
+		$$ f : z \mapsto w = e^z =e^{\text{Re}(z)}*\cjs(\text{Im}(z))$$
 		Waagrechte Gitternetzlinen gehen gemäss der obigen Gleichung in Strahlen
 		über, die im Koordinatenursprung beginnen, senktrechte Gitternetzlinien in
 		Kreise um den Koordinatenursprung. Die e$^z$-Funktion ist periodisch, deshalb
@@ -253,7 +253,7 @@ $w_1 = \text{Re}(f(r+jc)); w_2 = \text{Im}(f(r+jc)) \qquad f'(z) = 0$ nicht wink
 	\end{minipage}
 \newpage
 \skriptsubsection{Kehrwertfunktion und Kreisspiegelung}{51ff}
-	$$\underbrace{f : z \mapsto w = \frac{1}{z};}_\text{Spiegelung an x-Achse} \quad (\arg(w) = -\arg(z), |w| = \frac{1}{|z|})
+	$$\underbrace{f : z \mapsto w = \frac{1}{z};}_\text{Spiegelung an x-Achse (Kehrwert)} \quad (\arg(w) = -\arg(z), |w| = \frac{1}{|z|})
 	\qquad \qquad 
 	\underbrace{\overline{f}: z \mapsto w = \frac{1}{\overline{z}};}_\text{Kreisspiegelung}  \quad  
 	(\arg(w) = \arg(z), |w| = \frac{1}{|z|}) $$\\
@@ -387,6 +387,7 @@ $$ \text{Parameterform: } f(t) = m + r \cdot e^{jt}, \quad \text{mit } (0 \leq t
 			$a_n = \frac{4}{T} \int\limits_0^{\frac{T}{2}} f(t) \cdot \cos(n \omega t) \mathrm{d}t$ &
 			$Im[c_n] = 0$ \\
 			
+			& & \multicolumn{3}{l} {(Spiegelung an Y-Achse)}\\
 			& & \multicolumn{3}{l} {wenn $f(t)$ gerade ist bezgl. $\frac{T}{4} \Rightarrow a_{2m+1} = 0$}\\
 			& & \multicolumn{3}{l} {wenn $f(t)$ ungerade ist bezgl. $\frac{T}{4} \Rightarrow a_{2m} = 0$}\\
 
@@ -396,6 +397,7 @@ $$ \text{Parameterform: } f(t) = m + r \cdot e^{jt}, \quad \text{mit } (0 \leq t
 			$b_n =  \frac{4}{T}\int\limits_0^{\frac{T}{2}} f(t) \cdot \sin(n \omega t) \mathrm{d}t$ &
 			$ Re[c_n] = 0$\\
 
+			& & \multicolumn{3}{l} {(Punktspiegelung im Ursprung)}\\
 			& & \multicolumn{3}{l} {wenn $f(t)$ gerade ist bezgl. $\frac{T}{4} \Rightarrow b_{2m} = 0$}\\
 			& & \multicolumn{3}{l} {wenn $f(t)$ ungerade ist bezgl. $\frac{T}{4} \Rightarrow b_{2m+1} = 0$}\\
       	\end{tabular}
@@ -446,7 +448,6 @@ $$ f'(t) = \sum\limits_{n=1}^{\infty} [b_n n \omega \cdot \cos{(n \omega t)} - a
 
 \skriptsubsection{Gibbs'sches Phänomen}{92f}
 
-
 \begin{figure}[htbp]
 	\begin{minipage}[c]{8cm}
 		Die Fourier-Reihen schwingen bei Unstetigkeitsstellen über. Die Höhe der grössten überschwingenden Welle
@@ -457,8 +458,6 @@ $$ f'(t) = \sum\limits_{n=1}^{\infty} [b_n n \omega \cdot \cos{(n \omega t)} - a
 	\end{minipage}
 \end{figure}
 
-
-\newpage
 \skriptsection{Spektren}{103}
 \skriptsubsection{Spektraldarstellungen}{103ff} 
 
@@ -483,7 +482,7 @@ $$ f'(t) = \sum\limits_{n=1}^{\infty} [b_n n \omega \cdot \cos{(n \omega t)} - a
 \subsubsection{(1) Kosinus- und Sinusamplitudendiagramm} 
 Reelle Fourierkoeffizienten ($a_n, b_n$) können direkt abgelesen werden. 
 Bei einer Phasenverschiebung ändern sich jedoch die Koeffizienten grafisch nicht nachvollziehbar. \\
-Diese Darstellung hat gegenüber den anderen zwei mehr Nachteile und wird daher eher selten genutzt.
+Diese Darstellung hat gegenüber den anderen mehr Nachteile und wird daher eher selten genutzt.
 
 $$a_n = A_n \cdot \cos(\varphi_n) \qquad b_n = -A_n \cdot \sin(\varphi_n) = A_n \sin(-\varphi_n)$$
 
@@ -498,12 +497,10 @@ Spezialfall $n=0 \Rightarrow A_0 = |\frac{a_0}{2}| \text{ und } \varphi_0 = \lef
 		\end{array}
 	    \right. $\\
 
-
 \subsubsection{(3) Zweiseitiges Amplituden-/Phasendiagramm (komplexes Spektrum)} 
 Amplitudendiagramm ist achsensymmetrisch wegen $ c_n=\overline{c_{-n}} $. Phasendiagramm ist punktsymmetrisch. \\
 Ähnlichkeit mit Einseitigem: $|c_n| = \frac{1}{2}A_k $ und $\arg(c_n) = \varphi_k$ für alle $ n \geq 0$.\\
 $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = arg(a_n - jb_n) \qquad c_n = \frac{A_n}{2} \cdot e^{j\varphi_n}$$
-
 
 \skriptsubsection{Spezialfälle}{106}
 \begin{tabular}{ll}
@@ -525,12 +522,9 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
 
 \end{tabular}
 
-
-\newpage
 \label{LastPage}
 \section{Wichtige Formeln}
-	$\sin^2(b)+\cos^2(b)=1 \qquad \tan(b)=\frac{\sin(b)}{\cos(b)}$
-	
+	$\sin^2(b)+\cos^2(b)=1 \qquad \tan(b)=\frac{\sin(b)}{\cos(b)}$	
 	
 \subsection{Funktionswerte für Winkelargumente}
 	\renewcommand{\arraystretch}{1.5}
@@ -599,6 +593,7 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
 	\end{minipage}
 	\renewcommand{\arraystretch}{1}
 	
+	$\tan^{-1}$: wenn x$>$1 dann gilt: $\tan^{-1}(x)=\frac{\Pi}{2}-\tan^{-1}(\frac{1}{x})$
 \subsection{Periodizität}
 	$\cos(a+k\cdot2\pi)=\cos(a) \qquad \sin(a+k\cdot2\pi)=\sin(a) \qquad
 	(k \in \mathbb{Z})$
@@ -614,7 +609,7 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
     \end{tabbing}
 
 
-\begin{minipage}{12.5cm}
+\begin{minipage}[t]{10cm}
 	\subsection{Additionstheoreme}
 		$\sin(a \pm b)=\sin(a) \cdot \cos(b) \pm \cos(a) \cdot \sin(b)$\\
 		$\cos(a \pm b)=\cos(a) \cdot \cos(b) \mp \sin(a) \cdot \sin(b)$\\	
@@ -627,10 +622,13 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
 		\sin^2 \left(\frac{a}{2}\right)=\frac{1-\cos(a)}{2}$
 		
 	\subsection{Produkte}
-		$\sin(a)\sin(b)=\frac{1}{2}(\cos(a-b)-cos(a+b))$\\
-		$\cos(a)\cos(b)=\frac{1}{2}(\cos(a-b)+cos(a+b))$\\
-		$\sin(a)\cos(b)=\frac{1}{2}(\sin(a-b)+\sin(a+b))$
+			$\sin(a)\sin(b)=\frac{1}{2}(\cos(a-b)-cos(a+b))$\\
+			$\cos(a)\cos(b)=\frac{1}{2}(\cos(a-b)+cos(a+b))$\\
+			$\sin(a)\cos(b)=\frac{1}{2}(\sin(a-b)+\sin(a+b))$
 		
+				
+\end{minipage}
+\begin{minipage}[t]{6cm}			
 	\subsection{Summe und Differenz}
 		$\sin(a)+\sin(b)=2 \cdot \sin \left(\frac{a+b}{2}\right) \cdot
 		\cos\left(\frac{a-b}{2}\right)$\\
@@ -640,11 +638,11 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
 		\cos\left(\frac{a-b}{2}\right)$\\
 		$\cos(a)-\cos(b)=-2 \cdot \sin \left(\frac{a+b}{2}\right) \cdot
 		\cos\left(\frac{a-b}{2}\right)$\\
-		$\tan(a) \pm \tan(b)=\frac{\sin(a \pm b)}{\cos(a)\cos(b)}$			
+		$\tan(a) \pm \tan(b)=\frac{\sin(a \pm b)}{\cos(a)\cos(b)}$
 \end{minipage}
-\begin{minipage}{6cm}
-	\includegraphics[width=6cm]{./bilder/vektor1.png}
-\end{minipage}
+
+\subsection{Skalar}
+	\includegraphics[width=15cm]{./bilder/vektor1.png}
 
 \section{Diverses}
 \begin{tabbing}
@@ -655,13 +653,14 @@ $$arg(c_{-n}) = -arg(c_n) \qquad c_n = \frac{a_n - jb_n}{2} \qquad \varphi_n = a
 	$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ \> $\binom n k = \frac{n!}{k!
 	\cdot (n-k)!}$ \> $(a \pm b)^4 =a^4 \pm  4 a^{3} b + 6a^2b^2 \pm 4 a b^3 +
 	b^4$\\ 
-	\\Partielle Integration: $\int u(x) v'(x) dx = u(x)v(x) - \int u'(x) v(x) dx$
+	\\Partielle Integration: $\int^{b}_{a} u(x) v'(x) dx = [u(x)v(x)]^{b}_{a} - \int^{b}_{a} u'(x) v(x) dx$
 \end{tabbing}
+
 
 \begin{center}
 \includegraphics[width=18cm]{./bilder/integral1.png}
 \end{center}
-
+\newpage
 \begin{center}
 \includegraphics[width=18cm]{./bilder/integral2.png}
 \end{center}
